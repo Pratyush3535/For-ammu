@@ -13,6 +13,7 @@ body {
   padding: 0;
   text-align: center;
   color: #333;
+  display: none;
   overflow-x: hidden;
 }
 
@@ -89,9 +90,12 @@ button:hover {
 <!-- PASSWORD -->
 <script>
 const pass = prompt("This page is only for Meeru 💕\nEnter the secret word:");
-if (pass !== "meeru") {
-  document.body.innerHTML =
-  "<h2 style='margin-top:40vh;color:#ff5e8e'>Access Denied 💔</h2>";
+if (pass === "meeru") {
+  document.body.style.display = "block";
+} else {
+  "<h2 
+    style='margin-top:40vh;color:#ff5e8e'>Access Denied 💔</h2>";
+  document.body.style.display = "block";
 }
 </script>
 
